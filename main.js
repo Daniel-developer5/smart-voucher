@@ -4,8 +4,21 @@ $(() => {
     dots: true,
   })
 
-  $('.text-slider-prev').click(() => $('.slick.text-slider').slick('slickPrev', true))
-  $('.text-slider-next').click(() => $('.slick.text-slider').slick('slickNext', true))
+  $('.voucher-img-slider').slick({
+    arrows: false,
+    dots: false,
+    speed: 1000,
+  })
+
+  $('.text-slider-prev').click(() => {
+    $('.slick.text-slider').slick('slickPrev', true)
+    $('.voucher-img-slider').slick('slickPrev', true)
+  })
+
+  $('.text-slider-next').click(() => {
+    $('.slick.text-slider').slick('slickNext', true)
+    $('.voucher-img-slider').slick('slickNext', true)
+  })
 
   $('.animate-offers').on('mousemove', function (e) {
     const rateX = 0.02
@@ -67,9 +80,11 @@ $(() => {
 
   $(window).on('scroll', scrollAnim)
 
-  $('.faq-accordions').accordion({
-    collapsible: true,
-  })
+  if ($('.faq-accordions').accordion) {
+    $('.faq-accordions').accordion({
+      collapsible: true,
+    })
+  }
 
   const emailRegEx = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
 

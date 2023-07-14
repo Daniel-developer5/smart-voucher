@@ -50,6 +50,7 @@
     .container {
       display: flex;
       justify-content: space-between;
+      overflow: hidden;
 
       @media (max-width: $breakpoint-tablet) {
         flex-direction: column;
@@ -87,6 +88,22 @@
         justify-content: space-between;
         gap: 8px;
       }
+    }
+
+    .voucher-img-slider {
+      width: 60%;
+
+      @media (max-width: $breakpoint-laptop) {
+        width: 50%;
+      }
+
+      @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+      }
+    }
+    
+    .voucher-img-slider .slick-list {
+      overflow: hidden;
     }
 
     .voucher-list {

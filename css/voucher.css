@@ -621,6 +621,7 @@ img {
 .voucher-page .slider-section .container {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .voucher-page .slider-section .container {
@@ -670,6 +671,22 @@ img {
   display: flex;
   justify-content: space-between;
   gap: 8px;
+}
+.voucher-page .slider-section .voucher-img-slider {
+  width: 60%;
+}
+@media (max-width: 1099px) {
+  .voucher-page .slider-section .voucher-img-slider {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .voucher-page .slider-section .voucher-img-slider {
+    width: 100%;
+  }
+}
+.voucher-page .slider-section .voucher-img-slider .slick-list {
+  overflow: hidden;
 }
 .voucher-page .slider-section .voucher-list {
   margin-left: 24px;
