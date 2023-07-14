@@ -1,0 +1,95 @@
+@import '../base';
+@import './secondary-page-template';
+@import '../components/inputs';
+
+.contact-page {
+  .main-content {
+    .container {
+      .text-box {
+        max-width: 500px;
+
+        @media (max-width: $breakpoint-tablet) {
+          width: 100%;
+          max-width: 100%;
+        }
+
+        .texts {
+          margin-top: 32px;
+          gap: 20px;
+
+          .text {
+            @include text-body;
+          }
+        }
+
+        .faq-accordion {
+          margin-top: 40px;
+
+          .faq-title {
+            @include text-body-bold;
+            margin-bottom: 16px;
+          }
+
+          .faq-accordions {
+            .ui-accordion-header {
+              @include text-body-bold($color-black);
+              background: $color-white;
+              border: none;
+              border-radius: 8px 8px 0 0;
+              padding: 8px 10px;
+
+              &-collapsed {
+                border-radius: 8px;
+                margin-bottom: 12px;
+              }
+
+              .ui-accordion-header-icon {
+                display: none;
+              }
+            }
+
+            .ui-accordion-content {
+              padding: 8px 10px;
+              border-radius: 0 0 8px 8px;
+              border-top: 1px solid $color-gray;
+              display: grid;
+              gap: 4px;
+
+              &:not(:last-child) {
+                margin-bottom: 12px;
+              }
+
+              &, p {
+                @include text-body(#717171);
+              }
+            }
+          }
+        }
+      }
+
+      .form-box {
+        margin-top: 80px;
+        margin-right: 24px;
+        flex-grow: 1;
+        display: grid;
+        gap: 12px;
+
+        @media (max-width: $breakpoint-tablet) {
+          margin-top: 0;
+          margin-bottom: 36px;
+          width: 100%;
+        }
+
+        .btn-box {
+          display: flex;
+          justify-content: flex-end;
+          
+          .button {
+            padding-right: 80px;
+            padding-left: 80px;
+          }
+        }
+      }
+    }
+  }
+}

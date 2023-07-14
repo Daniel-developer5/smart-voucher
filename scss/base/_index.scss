@@ -1,0 +1,24 @@
+@import './reset';
+@import './variables';
+@import './typography';
+@import './animations';
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding-right: $section-padding-desktop;
+  padding-left: $section-padding-desktop;
+
+  @media (max-width: $breakpoint-laptop) {
+    padding-right: $section-padding-tablet;
+    padding-left: $section-padding-tablet;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding-right: $section-padding-mobile;
+    padding-left: $section-padding-mobile;
+  }
+}

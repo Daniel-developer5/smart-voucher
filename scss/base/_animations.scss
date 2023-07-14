@@ -1,0 +1,41 @@
+.appear-anim {
+  transition: ease-out 0.8s;
+}
+
+.animationFadeUp {
+  opacity: 0;
+  transform: translateY(40px);
+
+  &.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animationFadeRight {
+  opacity: 0;
+  transform: translateX(-100px);
+
+  &.animated {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animationFadeLeft {
+  opacity: 0;
+  transform: translateX(100px);
+
+  &.animated {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animationOpacity {
+  opacity: 0;
+
+  &.animated {
+    opacity: 1;
+  }
+}

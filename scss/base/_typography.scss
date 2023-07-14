@@ -1,0 +1,76 @@
+%text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+@mixin text-nav($color: $color-white) {
+  @extend %text;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  line-height: 110%;
+  color: $color;
+}
+
+@mixin text-button($color: $color-white) {
+  @extend %text;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  line-height: 110%;
+  font-weight: 600;
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin text-body($color: $color-white) {
+  @extend %text;
+  font-weight: 400;
+  font-size: 16px;
+  color: $color;
+}
+
+@mixin text-body-bold($color: $color-white) {
+  @include text-body($color);
+  font-weight: 600;
+}
+
+@mixin text-body-lg($color: $color-white) {
+  @extend %text;
+  font-weight: 600;
+  font-size: 20px;
+  color: $color;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 18px;       
+  }
+}
+
+@mixin text-body-small($color: $color-white) {
+  @extend %text;
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba($color: $color, $alpha: 0.8);
+}
+
+@mixin text-h1($color: $color-white) {
+  @extend %text;
+  font-size: 62px;
+  letter-spacing: 0.01em;
+  line-height: 110%;
+  font-weight: 600;
+  color: $color;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 40px;           
+  }
+}
+
+@mixin text-h3($color: $color-white) {
+  @extend %text;
+  font-weight: 600;
+  font-size: 24px;
+  color: $color;
+
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 22px;       
+  }
+}

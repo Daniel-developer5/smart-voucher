@@ -1,0 +1,93 @@
+@import '../base';
+@import '../components/header';
+@import '../components/button';
+@import '../components/placeholder-image';
+
+.secondary-page {
+  min-height: 100vh;
+  padding-bottom: 100px;
+  background: url('../images/bg-about-us.png');
+  background-size: cover;
+
+  .main-content {
+    padding-top: 60px;
+    padding-bottom: 48px;
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+
+      @media (max-width: $breakpoint-tablet) {
+        flex-direction: column;   
+      }
+
+      .img-box {
+        margin-right: 90px;
+        min-width: 300px;
+
+        @media (max-width: $breakpoint-laptop) {
+          min-width: 150px;
+          margin-right: 32px;
+        }
+
+        @media (max-width: $breakpoint-tablet) {
+          margin-right: 0;
+          margin-bottom: 32px;
+          max-width: 300px;
+        }
+      }
+
+      .text-box {
+        .title {
+          @include text-h1;
+          margin-bottom: 18px;
+        }
+
+        .nav-item {
+          @include text-body-small;
+          display: flex;
+          align-items: center;
+          margin-bottom: 24px;
+
+          .arrow {
+            margin: 0 16px;
+          }
+        }
+
+        .article-title {
+          @include text-body-lg;
+          margin-bottom: 24px;
+        }
+
+        .text {
+          @include text-body;
+          margin-bottom: 16px;
+
+          &.bold {
+            @include text-body-bold;
+          }
+        }
+
+        .texts {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 60px;
+          gap: 8px;
+
+          @media (max-width: $breakpoint-tablet) {
+            flex-direction: column;
+          }
+
+          .text {
+            font-size: 18px;
+            max-width: 280px;
+
+            @media (max-width: $breakpoint-tablet) {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

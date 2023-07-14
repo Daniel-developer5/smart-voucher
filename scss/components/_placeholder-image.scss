@@ -1,0 +1,24 @@
+.image-with-placeholder {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background-color: rgba($color: $color-dark-purple, $alpha: 0.8);
+    border-radius: 20px;
+  }
+
+  img {
+    max-width: 95%;
+    position: relative;
+    z-index: 1;
+    display: block;
+  }
+}

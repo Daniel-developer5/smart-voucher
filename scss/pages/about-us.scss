@@ -1,0 +1,53 @@
+@import '../base';
+@import '../components/header';
+@import '../components/button';
+@import '../components/placeholder-image';
+@import './secondary-page-template';
+
+.about-page {
+  .articles {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+
+      @media (max-width: $breakpoint-tablet) {
+        grid-template-columns: 1fr;   
+      }
+
+      .article {
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        background-color: $color-white;
+
+        &:hover {
+          button:after {
+            background-color: $color-dark-purple;
+          }
+        }
+
+        .article-img {
+          max-height: 200px;
+          object-fit: cover;
+          border-radius: 18px;
+          flex-grow: 1;
+        }
+
+        .placeholder {
+          min-height: 200px;
+          background-color: $color-purple;
+          border-radius: 18px;
+          flex-grow: 1;
+        }
+
+        button {
+          margin-top: 16px;
+          border: none;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
